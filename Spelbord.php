@@ -1,23 +1,31 @@
 <?php
 function toonSpelbord($blauw, $geel, $groen, $rood) {
-    // Initialiseer het bord als een lege string
+    // Laat het spelbord zien
     $bord = '';
 
-    // Vul het bord met lege posities
-    for ($i = 0; $i < 40; $i++) {
+    for ($i = 0; $i < 39; $i++) {
         $bord .= '. ';
     }
 
-    // Vervang de posities met de pionnen
+    // Plaatst pionnen
     $bord[$blauw * 2] = 'B';
     $bord[$geel * 2] = 'Y';
     $bord[$groen * 2] = 'G';
     $bord[$rood * 2] = 'R';
 
+    // Functie om een reeks van tekens te herhalen
+    function herhaalTekens($teken, $aantal) {
+        $resultaat = '';
+        for ($i = 0; $i < $aantal; $i++) {
+            $resultaat .= $teken;
+        }
+        return $resultaat;
+    }
+
     // Toon het bord
-    echo str_repeat('=', 90) . "\n";
+    echo herhaalTekens('=', 78) . "\n";
     echo $bord . "\n";
-    echo str_repeat('=', 90) . "\n";
+    echo herhaalTekens('=', 78) . "\n";
 }
 
 // Voorbeeld aanroep van de functie
