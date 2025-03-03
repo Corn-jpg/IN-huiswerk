@@ -13,6 +13,14 @@ function toonSpelbord($blauw, $geel, $groen, $rood) {
     $bord[$groen * 2] = 'G';
     $bord[$rood * 2] = 'R';
 
+
+
+    // Toon het bord
+    echo herhaalTekens('=', 78) . "\n";
+    echo $bord . "\n";
+    echo herhaalTekens('=', 78) . "\n";
+}
+
     // Functie om een reeks van tekens te herhalen
     function herhaalTekens($teken, $aantal) {
         $resultaat = '';
@@ -22,12 +30,5 @@ function toonSpelbord($blauw, $geel, $groen, $rood) {
         return $resultaat;
     }
 
-    // Toon het bord
-    echo herhaalTekens('=', 78) . "\n";
-    echo $bord . "\n";
-    echo herhaalTekens('=', 78) . "\n";
-}
-
-// Voorbeeld aanroep van de functie
 toonSpelbord(0, 10, 20, 30);
 ?>
