@@ -62,3 +62,5 @@
     echo "Worp 4: " . gooiDobbelsteen() . "\n";
     echo "Worp 5: " . gooiDobbelsteen() . "\n";
     ?>
+</body>
+</html>
